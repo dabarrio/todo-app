@@ -21,10 +21,12 @@ const AppTodo = () => {
         }
 
         let arrItem = [...todos]
-        arrItem.push(newTodo)
+        if(newTodo.title!==''){
+            arrItem.push(newTodo)
 
-        setTodos(arrItem)
-        setValue('')
+            setTodos(arrItem)
+            setValue('')
+        }
     }
 
     function handleUpdate(id, value){
@@ -49,13 +51,14 @@ const AppTodo = () => {
                     placeholder="Ingresa tu tarea"
                     onChange={handleChange}
                     value={value}
-                    className = {css.inputSearch}
+                    className={css.inputSearch}
                 />
-                <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-search" width="40" height="40" viewBox="0 0 24 24" stroke-width="1.5" stroke="#00b341" fill="none" stroke-linecap="round" stroke-linejoin="round" type='submit' onClick={handleClick}>
-                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                        <circle cx="12" cy="12" r="9" />
-                        <path d="M9 12l2 2l4 -4" />
-                    </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-square-plus" width="40" height="40" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round" onClick={handleClick}>
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                    <rect x="4" y="4" width="16" height="16" rx="2" />
+                    <line x1="9" y1="12" x2="15" y2="12" />
+                    <line x1="12" y1="9" x2="12" y2="15" />
+                </svg>
             </form>
 
             <div className={css.containerTodos}>
