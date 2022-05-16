@@ -1,0 +1,36 @@
+.todo{
+display: flex;
+align-items: center;
+background-color: rgb(189, 189, 189);
+border-radius: 10px;
+padding: 5px;
+}
+.todoTitle{
+    flex: 1;
+    font-size: 20px;
+    padding: 10px;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none; 
+}
+.update{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.updateInput{
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #000;
+    border-radius: 10px;
+}
+
+.todoComplete{
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    padding: 5px;
+    background-color: rgb(0, 255, 64);
+}

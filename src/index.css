@@ -1,0 +1,13 @@
+body {
+  margin: 0 auto;
+  font-family: 'Akshar', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  background-image: url(../img/Untitled.jpg);
+  text-align: center;
+}
+
+code {
+  font-family: 'Akshar', sans-serif;
+}
